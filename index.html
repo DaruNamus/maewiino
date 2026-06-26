@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="maewiino — Vokalis profesional untuk segala jenis acara. Pesan jasa music entertainment, vocal only, solo performance, dan event. Hubungi management langsung via WhatsApp.">
+  <meta name="keywords" content="maewiino, vocalist, penyanyi, jasa musik, entertainment, solo performance, vocal only, event musik, booking">
+  <meta property="og:title" content="maewiino — Vocal & Music Services">
+  <meta property="og:description" content="Pesan jasa musik profesional — Entertainment, Vocal Only, Solo Performance, Event. Hubungi management langsung via WhatsApp.">
+  <meta property="og:type" content="website">
+  <title>maewiino — Vocal & Music Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-logo">
+      <span class="loading-name">maewiino</span>
+      <div class="loading-bar">
+        <div class="loading-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo">maewiino</a>
+    <div class="nav-links">
+      <a href="#services" class="nav-link">Layanan</a>
+      <a href="#about" class="nav-link">Tentang</a>
+      <a href="#booking" class="nav-link">Booking</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" class="mobile-link" onclick="closeMobileMenu()">Layanan</a>
+    <a href="#about" class="mobile-link" onclick="closeMobileMenu()">Tentang</a>
+    <a href="#booking" class="mobile-link" onclick="closeMobileMenu()">Booking</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="bahan_photo/DSCF2906.JPG.jpeg" alt="maewiino" class="hero-img" id="heroImg">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">Vocalist · Performer · Music Direction</div>
+      <h1 class="hero-name reveal reveal-delay-1">maewiino</h1>
+      <p class="hero-sub reveal reveal-delay-2">Dari intimate gathering hingga panggung besar —<br>suara yang pas untuk setiap momen.</p>
+      <div class="hero-cta reveal reveal-delay-3">
+        <a href="#booking" class="btn-primary">Pesan Sekarang</a>
+        <a href="#services" class="btn-ghost">Lihat Layanan</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Layanan</span>
+        <h2 class="section-title reveal reveal-delay-1">Apa yang bisa<br><em>kami hadirkan</em></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal" data-service="entertainment" onclick="selectService('entertainment')">
+          <div class="service-number">01</div>
+          <div class="service-icon">🎤</div>
+          <h3 class="service-name">Music Entertainment</h3>
+          <p class="service-desc">Paket lengkap — vokal dan band untuk acara hiburan. Dari wedding reception hingga corporate event, kami hadirkan pengalaman musik yang tak terlupakan.</p>
+          <div class="service-tags">
+            <span>Wedding</span>
+            <span>Corporate</span>
+            <span>Gala Dinner</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1" data-service="vocal_only" onclick="selectService('vocal_only')">
+          <div class="service-number">02</div>
+          <div class="service-icon">🎙️</div>
+          <h3 class="service-name">Vocal Only</h3>
+          <p class="service-desc">Pengiring musik sudah tersedia? maewiino hadir sebagai vokalis. Solusi fleksibel saat event sudah memiliki band atau backing track sendiri.</p>
+          <div class="service-tags">
+            <span>Fleksibel</span>
+            <span>Plug & Play</span>
+            <span>Live Band</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2" data-service="solo_performance" onclick="selectService('solo_performance')">
+          <div class="service-number">03</div>
+          <div class="service-icon">🎵</div>
+          <h3 class="service-name">Solo Performance</h3>
+          <p class="service-desc">Penampilan akustik intim yang menyentuh. Ideal untuk rooftop gathering, private dinner, atau acara yang membutuhkan nuansa personal dan hangat.</p>
+          <div class="service-tags">
+            <span>Akustik</span>
+            <span>Intimate</span>
+            <span>Private</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-3" data-service="event" onclick="selectService('event')">
+          <div class="service-number">04</div>
+          <div class="service-icon">🎶</div>
+          <h3 class="service-name">Event Music Direction</h3>
+          <p class="service-desc">Butuh susun line-up dari nol? Kami atur semua — dari pemilihan musisi, aransemen lagu, hingga teknis sound. Satu kontak untuk satu solusi musik lengkap.</p>
+          <div class="service-tags">
+            <span>Full Package</span>
+            <span>Produksi</span>
+            <span>Manajemen</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="about-image-col">
+      <img src="bahan_photo/DSCF2924.JPG.jpeg" alt="maewiino vocalist" class="about-img">
+    </div>
+    <div class="about-content-col">
+      <span class="section-label reveal">Tentang</span>
+      <h2 class="section-title reveal reveal-delay-1">Lebih dari<br><em>sekadar penyanyi</em></h2>
+      <div class="about-text reveal reveal-delay-2">
+        <p>maewiino adalah seorang vokalis yang tidak hanya tampil di atas panggung — ia memahami keseluruhan ekosistem sebuah pertunjukan musik.</p>
+        <p>Bergabung bersama band namun tidak terikat, ia bebas hadir dalam berbagai format: dari penampilan solo yang intim, menjadi vokalis tambahan untuk acara yang sudah memiliki band, hingga memimpin seluruh aransemen musik sebuah event dari nol.</p>
+        <p>Setiap penampilan adalah cerita. Setiap nada adalah komitmen.</p>
+      </div>
+      <div class="about-stats reveal reveal-delay-3">
+        <div class="stat">
+          <span class="stat-number">4+</span>
+          <span class="stat-label">Jenis Layanan</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Genre Musik</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">1</span>
+          <span class="stat-label">Kontak Langsung</span>
+        </div>
+      </div>
+      <div class="about-social reveal reveal-delay-3">
+        <a href="https://instagram.com/maewiino" target="_blank" rel="noopener" class="social-link" id="ig-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          @maewiino
+        </a>
+        <a href="https://tiktok.com/@overwiino" target="_blank" rel="noopener" class="social-link" id="tiktok-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.22 8.22 0 004.8 1.54V6.74a4.86 4.86 0 01-1.03-.05z"/></svg>
+          @overwiino
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section class="booking" id="booking">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Booking</span>
+        <h2 class="section-title reveal reveal-delay-1">Hubungi kami<br><em>sekarang</em></h2>
+        <p class="section-sub reveal reveal-delay-2">Isi form di bawah — pesan WhatsApp akan terformat otomatis dan langsung dikirim ke management kami.</p>
+      </div>
+
+      <div class="booking-layout">
+        <!-- FORM -->
+        <form class="booking-form reveal reveal-delay-1" id="bookingForm" onsubmit="sendToWhatsApp(event)">
+
+          <div class="form-group">
+            <label for="clientName">Nama Anda / Nama Acara <span class="required">*</span></label>
+            <input type="text" id="clientName" name="clientName" placeholder="contoh: Rizky / Wedding Sari & Budi" required>
+          </div>
+
+          <div class="form-group">
+            <label for="serviceType">Jenis Layanan <span class="required">*</span></label>
+            <div class="select-wrapper">
+              <select id="serviceType" name="serviceType" required>
+                <option value="" disabled selected>Pilih jenis layanan...</option>
+                <option value="Music Entertainment">🎤 Music Entertainment — Band + Vokal</option>
+                <option value="Vocal Only">🎙️ Vocal Only — Vokalis saja</option>
+                <option value="Solo Performance">🎵 Solo Performance — Akustik / Intimate</option>
+                <option value="Event Music Direction">🎶 Event Music Direction — Susun dari nol</option>
+              </select>
+              <div class="select-arrow">↓</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="eventDate">Tanggal Acara <span class="required">*</span></label>
+              <input type="date" id="eventDate" name="eventDate" required>
+            </div>
+            <div class="form-group">
+              <label for="eventDuration">Estimasi Durasi <span class="required">*</span></label>
+              <div class="select-wrapper">
+                <select id="eventDuration" name="eventDuration" required>
+                  <option value="" disabled selected>Pilih durasi...</option>
+                  <option value="1 Jam">1 Jam</option>
+                  <option value="2 Jam">2 Jam</option>
+                  <option value="3 Jam">3 Jam</option>
+                  <option value="4 Jam">4 Jam</option>
+                  <option value="Lebih dari 4 Jam (akan didiskusikan)">4+ Jam (diskusi)</option>
+                </select>
+                <div class="select-arrow">↓</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="eventLocation">Lokasi Acara <span class="required">*</span></label>
+            <input type="text" id="eventLocation" name="eventLocation" placeholder="contoh: Ballroom Hotel Mulia, Jakarta Selatan">
+          </div>
+
+          <div class="form-group">
+            <label for="guestCount">Estimasi Jumlah Tamu <span class="optional">(opsional)</span></label>
+            <input type="text" id="guestCount" name="guestCount" placeholder="contoh: ±200 orang">
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Catatan Tambahan <span class="optional">(opsional)</span></label>
+            <textarea id="notes" name="notes" rows="4" placeholder="contoh: Tema acara formal, preferensi genre jazz & pop, ada sesi cocktail sebelum dinner..."></textarea>
+          </div>
+
+          <!-- PREVIEW -->
+          <div class="message-preview" id="messagePreview">
+            <div class="preview-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.894 0C5.312 0 0 5.313 0 11.894c0 2.096.546 4.142 1.587 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.532 1.367h.005c6.579 0 11.9-5.313 11.9-11.9 0-3.181-1.237-6.167-3.484-8.414C18.064 1.236 15.072 0 11.894 0z"/></svg>
+              Pratinjau Pesan WhatsApp
+            </div>
+            <div class="preview-body" id="previewBody">
+              <em class="preview-placeholder">Isi form di atas untuk melihat pratinjau pesan...</em>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-wa" id="submitBtn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.894 0C5.312 0 0 5.313 0 11.894c0 2.096.546 4.142 1.587 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.532 1.367h.005c6.579 0 11.9-5.313 11.9-11.9 0-3.181-1.237-6.167-3.484-8.414C18.064 1.236 15.072 0 11.894 0z"/></svg>
+            Kirim via WhatsApp
+          </button>
+
+        </form>
+
+        <!-- INFO PANEL -->
+        <div class="booking-info reveal reveal-delay-2">
+          <div class="info-card">
+            <h3 class="info-title">Cara Booking</h3>
+            <ol class="info-steps">
+              <li>
+                <span class="step-num">01</span>
+                <div>
+                  <strong>Isi form</strong>
+                  <p>Lengkapi detail acara kamu di form sebelah.</p>
+                </div>
+              </li>
+              <li>
+                <span class="step-num">02</span>
+                <div>
+                  <strong>Kirim via WhatsApp</strong>
+                  <p>Klik tombol — pesan terformat langsung dikirim ke management.</p>
+                </div>
+              </li>
+              <li>
+                <span class="step-num">03</span>
+                <div>
+                  <strong>Diskusi & Konfirmasi</strong>
+                  <p>Management akan merespons dan membahas detail lebih lanjut.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-card info-highlight">
+            <div class="info-highlight-icon">⚡</div>
+            <h4>Respon Cepat</h4>
+            <p>Management aktif dan siap merespons inquiry dalam waktu singkat via WhatsApp.</p>
+          </div>
+
+          <div class="info-card">
+            <h4 style="margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase;">Kontak Langsung</h4>
+            <a href="https://wa.me/6288215797276" target="_blank" rel="noopener" class="direct-wa-btn" id="direct-wa-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.894 0C5.312 0 0 5.313 0 11.894c0 2.096.546 4.142 1.587 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.532 1.367h.005c6.579 0 11.9-5.313 11.9-11.9 0-3.181-1.237-6.167-3.484-8.414C18.064 1.236 15.072 0 11.894 0z"/></svg>
+              +62 882-1579-7276
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">maewiino</span>
+        <p class="footer-tagline">Vocal · Performer · Music Direction</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://instagram.com/maewiino" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://tiktok.com/@overwiino" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.67a8.22 8.22 0 004.8 1.54V6.74a4.86 4.86 0 01-1.03-.05z"/></svg>
+        </a>
+        <a href="https://wa.me/6288215797276" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.894 0C5.312 0 0 5.313 0 11.894c0 2.096.546 4.142 1.587 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.532 1.367h.005c6.579 0 11.9-5.313 11.9-11.9 0-3.181-1.237-6.167-3.484-8.414C18.064 1.236 15.072 0 11.894 0z"/></svg>
+        </a>
+      </div>
+      <div class="footer-copy">
+        <p>© 2026 maewiino. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WA BUTTON -->
+  <a href="https://wa.me/6288215797276" target="_blank" rel="noopener" class="floating-wa" id="floatingWa" aria-label="Chat WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.894 0C5.312 0 0 5.313 0 11.894c0 2.096.546 4.142 1.587 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.532 1.367h.005c6.579 0 11.9-5.313 11.9-11.9 0-3.181-1.237-6.167-3.484-8.414C18.064 1.236 15.072 0 11.894 0z"/></svg>
+    <span class="floating-tooltip">Chat Management</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

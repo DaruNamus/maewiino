@@ -144,7 +144,7 @@ function updatePreview() {
   if (guests)     msg += `*Tamu*        : ${guests}\n`;
   if (notes)      msg += `*Catatan*     : ${notes}\n`;
 
-  msg += `\nMohon informasi lebih lanjut mengenai ketersediaan dan harga. Terima kasih.
+  msg += `\nMohon informasi lebih lanjut mengenai ketersediaan dan harga. Terima kasih.`;
 
   preview.textContent = msg;
   previewBox.classList.add('has-content');
@@ -214,7 +214,7 @@ function sendToWhatsApp(e) {
   if (guests)   msg += `*Tamu*        : ${guests}\n`;
   if (notes)    msg += `*Catatan*     : ${notes}\n`;
 
-  msg += `\nMohon informasi lebih lanjut mengenai ketersediaan dan harga. Terima kasih.
+  msg += `\nMohon informasi lebih lanjut mengenai ketersediaan dan harga. Terima kasih.`;
 
   const encoded = encodeURIComponent(msg);
   const waUrl = `https://wa.me/${WA_NUMBER}?text=${encoded}`;
